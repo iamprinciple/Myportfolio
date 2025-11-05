@@ -3,28 +3,35 @@ body {
   padding: 0;
   height: auto;
   width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .light-theme {
-  background-color: white;
-  color: black;
+  background-color: #0A192F;
   transition: background-color 0.3s, color 0.3s;
+  color: #CCD6F6;
 }
 
 .dark-theme {
-  background-color: #121212;
-  color: white;
+  background-color: #0D1117;
+  color: #E6E6E6;
   transition: background-color 0.3s, color 0.3s;
 }
 
 nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 20px;
+}
+.nav-holder{
+  width: 100%;
+  height: 60px;
   position: sticky;
   top: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 120px;
-  padding: 30px;
+  justify-content: center;
   box-shadow: 0 4px 6px rgba(71, 46, 46, 0.5);
   backdrop-filter: blur(10px);
 }
@@ -34,33 +41,32 @@ nav a{
   text-decoration: none;
   font-size: 17px;
   font-weight: 600;
-  color: grey;
+  color: #64FFDA;
   padding: 10px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
 nav a:hover{
   text-decoration: underline;
+  color: gray;
   font-size: 22px;
 }
 nav button{
-  background-color: grey;
+  background-color: transparent;
+  font-size: 35px;
+  font-weight: 700;
+  color: gray;
   border: none;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
-nav button:hover{
-  background-color: transparent;
-  padding: 20px;
-}
-
 .home_holder{
   width: 80%;
   display: flex;
   flex-direction: column;
   gap: 10px;
   text-align: center;
-  margin: auto;
+  /* margin: auto; */
   align-items: center;
   justify-content: center;
 }
@@ -70,34 +76,103 @@ nav button:hover{
   border-radius: 15px;
   font-size: 16px;
   font-weight: 800;
+  background-color: #112240;
+  border: 2px solid #64FFDA;
 }
 #home ,#about, #skill, #contact, #project{
   width: 100%;
-  height: auto;
-  padding: 30px;
+  height: 100vh;
+  padding: 20px;
 
 }
-/* #project{
-  width: 100%;
-   height: 450px;
-  padding: 50px;
-  background-color: aqua;
-} */
-
-#about div{
+#about, #project, #contact{
+  height: auto;
+}
+#home h3{
+  font-size: 30px;
+  font-weight: 800;
+}
+#contact, #home{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.upperbtn a{
+  text-decoration: none;
+}
+.projectHolder{
   width: 80%;
-  /* background-color: aqua; */
-  text-align: left;
+   height: auto;
+  padding: 20px;
+  /* background-color: #64FFDA; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.projectHolder img{
+  width: 100%;
+  height: 200px;
+}
+.singleProject{
+  /* width: fit-content; */
+  width: 35%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: grey;
+  padding: 5px;
+  align-items: center;
+  border: 4px solid #E6E6E6;
+}
+.singleProject a{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: #0A192F;
+}
+.singleProject i{
+  font-weight: 600;
+  max-height: 100px;   
+  overflow-y: auto;  
+  /* padding-right: 10px; */
+}
+.singleProject:hover a{
+  color: white;
+}
+.singleProject i::-webkit-scrollbar {
+  width: 3px;
+  background-color: whitesmoke;
+}
+.singleProject i::-webkit-scrollbar-thumb {
+  background-color: #64FFDA;
+  border-radius: 10px;
+}
+
+.singleProject i::-webkit-scrollbar-track {
+  background-color: #112240;
+}
+#about div{
+  /* width: 80%; */
+  max-width: 800px;
+  padding: 20px;
+  line-height: "1.8";
+  /* background-color: red; */
+  text-align: center;
   display: flex;
   flex-direction: column;
   gap: 20px;
   /* align-items: center; */
-  margin: auto;
+  margin: 50px auto;
   /* justify-content: center; */
 }
 #about p, #about li{
   font-size: 24px;
   font-weight: 600;
+  text-align: justify;
 }
 .skillholder{
   width: 80%;
@@ -122,10 +197,11 @@ nav button:hover{
 .contactholder{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 40px;
-  
+  width: 80%;
+  border: 2px solid #64FFDA;
 }
 .contact_div{
   display: flex;
@@ -158,13 +234,41 @@ nav button:hover{
 }
 .navholder{
   display: flex;
-  gap: 10px;
-  /* background-color: firebrick; */
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  /* padding: 10px; */
+  /* background-color: #64FFDA; */
 }
 .dropdown{
   display: none;
 }
+@media (max-width: 990px){
 
+.singleProject{
+  width: 100%;
+  flex-direction: row;
+}
+.projectHolder{
+  flex-direction: column;
+}
+.projectHolder img{
+  width: 40%;
+}
+.singleProject div{
+  width: 50%;
+}
+}
+
+@media (max-width: 530px){
+  .singleProject{
+  width: 100%;
+  flex-direction: column;
+}
+  .projectHolder img{
+  width: 100%;
+}
+}
 
 @media (max-width: 700px){
   #about p, #about li{
@@ -183,15 +287,17 @@ nav button:hover{
     display: flex;
   }
   .dropMenu {
-  position: absolute;
+position: absolute;
   top: 100%;
-  /* left: 0; */
   right: 0;
-  background-color: white;
-  color: black;
+  background-color: #0D1117;
   display: none;
-  width: 150px;
+  flex-direction: column;
+  width: 200px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
   z-index: 100;
   }
   .dropdown:hover .dropMenu{

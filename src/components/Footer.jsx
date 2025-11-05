@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div >
         <div className='footer'>
-            <h3>Emmanuel Adebayo</h3>
+            <h3 style={{ textAlign: "center", fontSize: "40px", fontWeight: "800" }}>Emmanuel Adebayo</h3>
             <div className='icons'>
                 <a href="https://wa.me/09069328820" target="_blank" rel="noopener noreferrer">
                     <FontAwesomeIcon icon={faSquareWhatsapp}  size="2x" style={{ color: '#25D366' }}/>

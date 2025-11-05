@@ -7,37 +7,40 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const Navbar = ({ toggleTheme }) => {
   return (
-    <nav>
-      <button>
-        <FontAwesomeIcon icon={faHouse} size="2x" />
-      </button>
-      <div className='navholder'>
-        <div className='d-flex gap-3'>
-          <a href="#about" >About</a>
-          <a href="#skill" >Skill</a>
-          <a href="#project" >Project</a>
-          <a href="#contact" >Contact Me</a>
-        </div>
-        <button onClick={toggleTheme}>
-          <FontAwesomeIcon icon={faMoon} size='2x' />
+    <div className='nav-holder'>
+      <nav>
+        <button>
+          <FontAwesomeIcon icon={faHouse} />
         </button>
-      </div>
-      <div className='dropdown'>
-        <button><FontAwesomeIcon icon={faBars} size='2x' /></button>
-        <div className='dropMenu'>
-          <div className='d-flex flex-column gap-3'>
+        <div className='navholder'>
+          <div className='d-flex gap-3'>
             <a href="#about" >About</a>
             <a href="#skill" >Skill</a>
             <a href="#project" >Project</a>
             <a href="#contact" >Contact Me</a>
           </div>
           <button onClick={toggleTheme}>
-            <FontAwesomeIcon icon={faMoon} size='2x' />
+            <FontAwesomeIcon icon={faMoon} />
           </button>
         </div>
-      </div>
+        
+        <div className='dropdown'>
+          <button><FontAwesomeIcon icon={faBars} /></button>
+          <div className='dropMenu'>
+            <div className='d-flex flex-column gap-3'>
+              <a href="#about" >About</a>
+              <a href="#skill" >Skill</a>
+              <a href="#project" >Project</a>
+              <a href="#contact" >Contact Me</a>
+            </div>
+            <button onClick={toggleTheme}>
+              <FontAwesomeIcon icon={faMoon} />
+            </button>
+          </div>
+        </div>
 
-    </nav>
+      </nav>
+    </div>
   )
 }
 

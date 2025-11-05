@@ -4,7 +4,7 @@ const Skill = () => {
     return (
         <section id="skill">
             <div className='skillholder'>
-                <h2 style={{textAlign: "center"}}>Skills</h2>
+                <h2 style={{textAlign: "center", fontSize: "40px", fontWeight: "800" }}>Skills</h2>
                 <div className='d-flex flex-column gap-3 align-items-left'>
                     <h4>Front-End</h4>
                     <div className='front'> 
