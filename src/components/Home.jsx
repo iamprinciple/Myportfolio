@@ -1,12 +1,13 @@
 import React from 'react'
 import { useEffect, useState } from "react"
-
-const Home = () => {
-    const roles = [
+ const roles = [
         "Full-Stack Developer",
         "Frontend Developer",
         "Backend Developer",
     ]
+
+const Home = () => {
+   
 
     const [displayText, setDisplayText] = useState("")
     const [roleIndex, setRoleIndex] = useState(0)
@@ -32,7 +33,7 @@ const Home = () => {
         }, typingSpeed)
 
         return () => clearTimeout(timeout)
-    }, [displayText, isDeleting, roleIndex, roles])
+    }, [displayText, isDeleting, roleIndex])
     return (
         <section id="home"
             className="relative min-h-screen flex items-center justify-center
