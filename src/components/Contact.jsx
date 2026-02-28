@@ -25,7 +25,6 @@ const Contact = () => {
     }
 
     try {
-      // 🔹 Replace this with your actual API call / email service
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       setStatus("Message sent successfully!");
@@ -120,13 +119,13 @@ const Contact = () => {
                             className="w-full px-4 py-3 rounded-lg border border-black  bg-gray-50 dark:bg-gray-800 text-black  focus:outline-none focus:ring-2 focus:ring-blue-500 transition resize-none"
                         ></textarea>
 
-                        {/* Submit Button */}
                         <button
                             type="submit"
                             className="w-full py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors"
                         >
                             Send Message
                         </button>
+                        <p className='text-red-500 text-center'>{status}</p>
                     </form>
                 </div>
 

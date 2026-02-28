@@ -32,7 +32,7 @@ const Home = () => {
         }, typingSpeed)
 
         return () => clearTimeout(timeout)
-    }, [displayText, isDeleting, roleIndex])
+    }, [displayText, isDeleting, roleIndex, roles])
     return (
         <section id="home"
             className="relative min-h-screen flex items-center justify-center

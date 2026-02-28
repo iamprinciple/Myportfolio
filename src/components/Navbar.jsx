@@ -6,9 +6,7 @@ import {
   faMessage,
   faUser,
   faBars,
-  faMoon,
   faHouse,
-  faSun,
   faXmark
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -50,7 +48,6 @@ const Navbar = ({ darkMode, toggleTheme }) => {
             <FontAwesomeIcon icon={faHouse} />
           </a>
 
-          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map(link => (
               <a
